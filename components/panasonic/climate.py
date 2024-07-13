@@ -1,15 +1,14 @@
 import esphome.codegen as cg
 import esphome.config_validation as cv
 from esphome.components import climate_ir
-from esphome.const import (
-    CONF_ID,
-    CONF_SUPPORTS_BOTH_SWING,
-    CONF_SUPPORTS_HORIZONTAL_SWING,
-    CONF_SUPPORTS_VERTICAL_SWING,
-)
+from esphome.const import CONF_ID
+
+CONF_SUPPORTS_BOTH_SWING = "supports_both_swing"
+CONF_SUPPORTS_HORIZONTAL_SWING = "supports_horizontal_swing"
+CONF_SUPPORTS_VERTICAL_SWING = "supports_vertical_swing"
 
 AUTO_LOAD = ["climate_ir"]
-CODEOWNERS = ["@WeekendWarrior1"]
+CODEOWNERS = ["@hientranea"]
 
 panasonic_ns = cg.esphome_ns.namespace("panasonic")
 PanasonicClimate = panasonic_ns.class_("PanasonicClimate", climate_ir.ClimateIR)
